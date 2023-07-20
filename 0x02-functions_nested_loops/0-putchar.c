@@ -1,38 +1,21 @@
 #include "main.h"
 
 /**
-* times_table - prints the 9 times table, starting with 0.
-**/
-void times_table(void)
+* main - main block
+* Description: Print _putchar followed by a new line.
+* Return: 0
+*/
+int main(void)
 {
-int i, j, k;
+char alx[] = "_putchar";
+int i = 0;
 
-for (i = 0; i <= 9; i++)
+while (alx[i] != '\0')
 {
-for (j = 0; j <= 9; j++)
-{
-k = i * j;
+_putchar(alx[i]);
+i++;
+}
 
-if (k <= 9)
-{
-if (j != 0)
-{
-_putchar(' ');
-}
-}
-else
-{
-_putchar((k / 10) + '0');
-}
-_putchar((k % 10) + '0');
-
-if (j != 9)
-{
-_putchar(',');
-_putchar(' ');
-}
-}
 _putchar('\n');
+return (0);
 }
-}
-
