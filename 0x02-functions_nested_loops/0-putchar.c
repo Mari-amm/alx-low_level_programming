@@ -1,21 +1,38 @@
 #include "main.h"
-/**
- *  main - Entry point
- *  Descreption: 'prints _putchar to stdout'
- *  Return: always 0
- */
 
- int main(void)
+/**
+* times_table - prints the 9 times table, starting with 0.
+**/
+void times_table(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
-	return (0);
+int i, j, k;
+
+for (i = 0; i <= 9; i++)
+{
+for (j = 0; j <= 9; j++)
+{
+k = i * j;
+
+if (k <= 9)
+{
+if (j != 0)
+{
+_putchar(' ');
+}
+}
+else
+{
+_putchar((k / 10) + '0');
+}
+_putchar((k % 10) + '0');
+
+if (j != 9)
+{
+_putchar(',');
+_putchar(' ');
+}
+}
+_putchar('\n');
+}
 }
 
