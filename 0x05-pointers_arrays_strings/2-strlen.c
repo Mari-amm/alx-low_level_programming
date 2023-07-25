@@ -1,5 +1,4 @@
-#include "main.h"
-#include <stdio.h>
+# include "main.h"
 /**
  * _strlen - return the lenght og the string
  * @s: string
@@ -7,12 +6,11 @@
  */
 int _strlen(char *s)
 {
-	int len = 0;
+	int c;
 
-	while (len != '\0')
+	for (c = 0; *s != '\0';s++)
 	{
-		len++;
-		s++;
+		c++
 	}
-	return (len);
+	return (c:%s/^[[:space:]]\+//g);
 }
