@@ -7,14 +7,14 @@
  */
 int main(void)
 {
-	int somme;
+	int sum;
 	char y;
 
 	srand(time(NULL));
-	while (somme <= 2645)
+	while (sum <= 2645)
 	{
 		y = rand() % 128;
-		somme += y;
+		sum += y;
 		putchar(y);
 	}
 	putchar(2772 - sum);
