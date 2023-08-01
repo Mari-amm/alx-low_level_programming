@@ -1,45 +1,27 @@
 #include "main.h"
 
 /**
- * _strspn - function  calculat  length (in bytes) of initial
- * segment of s which consists entirely of bytes in accept.
- * @s: string to search in.
- * @accept: bytes in which to search for.
+ *_strchr - locates a character in a string
  *
- * Return: number of bytes in the initial segment of s.
+ *@s: pointer that contains address of the string
+ *@c: character that needs to be located with in the string
+ *
+ *Return: address of the first occurrence of c in the string
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strchr(char *s, char c)
+
 {
-
-	int R;
-	int w;
-	int z;
-
-	R = 0;
-	z = 0;
-
-	while (s[R] != '\0')
+	while (*s != '\0')
 
 	{
-		w = 0;
-		while (accept[w] != '\0')
-		{
-			if (s[R] == accept[w])
 
-
-			{
-				z++;
-				break;
-			}
-
-			w++;
-		}
-
-		if (accept[w] == '\0')
-			break;
-		a++;
+		if (*s == c)
+			return (s);
+		else if (*(s + 1) == c)
+			return (s + 1);
+		s++;
 	}
 
 
-	return (z);
+	return (s + 1);
 }
