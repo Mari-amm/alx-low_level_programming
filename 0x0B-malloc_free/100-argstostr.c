@@ -10,7 +10,7 @@
 char *argstostr(int ac, char **av)
 {
 		char *new_string = NULL;
-		int B = 0, i = ac, r, summe = 0, temp = 0;
+		int B = 0, i = ac, r, summe = 0, tm = 0;
 
 		if (ac == 0 || av == NULL)
 			return (NULL);
@@ -24,12 +24,12 @@ char *argstostr(int ac, char **av)
 			while (B < i)
 			{
 				for (r = 0; av[B][r] != '\0'; r++)
-					new_string[r + temp] = av[B][r];
-				new_string[temp + r] = '\n';
-				temp += (r + 1);
+					new_string[r + tm] = av[B][r];
+				new_string[tm + r] = '\n';
+				tm += (r + 1);
 				B++;
 			}
-			new_string[temp] = '\0';
+			new_string[tm] = '\0';
 		}
 		else
 		{
