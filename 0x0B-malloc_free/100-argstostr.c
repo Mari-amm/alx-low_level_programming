@@ -10,26 +10,26 @@
 char *argstostr(int ac, char **av)
 {
 		char *new_string = NULL;
-		int a = 0, i = ac, i, summeme = 0, tm = 0;
+		int B = 0, i = ac, r, summe = 0, temp = 0;
 
 		if (ac == 0 || av == NULL)
 			return (NULL);
 
 		while (ac--)
-			summeme += (len(av[ac]) + 1);
-		new_string = (char *) malloc(summeme + 1);
+			summe += (len(av[ac]) + 1);
+		new_string = (char *) malloc(summe + 1);
 
 		if (new_string != NULL)
 		{
-			while (a < i)
+			while (B < i)
 			{
-				for (i = 0; av[a][i] != '\0'; i++)
-					new_string[i + tm] = av[a][i];
-				new_string[tm + i] = '\n';
-				tm += (i + 1);
-				a++;
+				for (r = 0; av[B][r] != '\0'; r++)
+					new_string[r + temp] = av[B][r];
+				new_string[temp + r] = '\n';
+				temp += (r + 1);
+				B++;
 			}
-			new_string[tm] = '\0';
+			new_string[temp] = '\0';
 		}
 		else
 		{
