@@ -1,15 +1,16 @@
 #include <stdio.h>
 
 /**
- * main - Prints the number of arguments passed to it.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - prints its name
+ * @argc: the number of arguments passed.
+ * @argv: the pointer to an array of pointers.
  *
- * Return: Always 0.
+ * Return: Always 0
  */
-int main(int argc, char att((__unused__)) *argv[])
+int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
-
+	while (argc--)
+		puts(*argv++);
 	return (0);
 }
+
